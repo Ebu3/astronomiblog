@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="jumbotron text-center">
+    <h3>Astronomi Bloğuna Hoş Geldiniz</h3>
+    <p>Bu blogta astronomi meraklıları olarak blog yazılarınızı paylaşabilirsiniz. Gökyüzüne, yıldızlara ve evrene olan merakınız hiç bitmesin varlığınız varlığımıza armağan...</p>
+</div>
+
+<p>
+    {% if request.user.is_authenticated %}
+        Giriş Yapılmış, {{request.user.username}}
+    {% else %}
+        Giriş Yapılmamış
+    {% endif %}
+</p>
+{% endblock body %}
